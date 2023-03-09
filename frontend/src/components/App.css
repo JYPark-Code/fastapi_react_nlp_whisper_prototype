@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+  
+  form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  form button[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: auto;
+    width: 100%;
+  }
+  
