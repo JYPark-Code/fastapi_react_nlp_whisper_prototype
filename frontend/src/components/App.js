@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Home';
 import STT from './STT';
 import YTSubs from './YTsubs';
+import Mic2Txt from './Mic2Txt';
 import Nav from './Nav';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/stt" element={<STT />} />
+            <Route path="/mic2txt" element={<Mic2Txt />} />
             <Route path="/yt_subtitle" element={<YTSubs />} />
           </Routes>
         </main>

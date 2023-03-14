@@ -9,10 +9,13 @@ function Nav() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/stt">STT</Link>
+            <Link to="/stt">STT_Audiofile</Link>
           </li>
           <li>
-            <Link to="/yt_subtitle">Youtube</Link>
+            <Link to="/mic2txt">STT_Microphone</Link>
+          </li>
+          <li>
+            <Link to="/yt_subtitle">Youtube_Subtitle</Link>
           </li>
         </ul>
       </nav>

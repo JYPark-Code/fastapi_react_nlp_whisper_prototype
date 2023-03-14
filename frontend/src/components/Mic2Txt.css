@@ -1,0 +1,61 @@
+.mic2txt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.mic2txt-container h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.mic2txt-container textarea {
+  width: 80%;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.mic2txt-container button {
+  margin: 10px 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: #0077cc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.mic2txt-container button:hover {
+  background-color: #005fa3;
+  color: white;
+}
+
+.mic2txt-container .play {
+  width: 50px;
+  height: 50px;
+}
+
+.mic2txt-container .pause {
+  width: 50px;
+  height: 50px;
+}
+
+.mic2txt-container .stop {
+  width: 50px;
+  height: 50px;
+}
+
+.mic2txt-container .copy-notification {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: #00cc66;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  z-index: 1;
+}

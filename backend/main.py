@@ -1,7 +1,7 @@
 import shutil
 import os
 import uuid
-from fastapi import FastAPI, File, UploadFile, HTTPException, Response
+from fastapi import FastAPI, File, UploadFile, HTTPException, Response, WebSocket
 from fastapi.responses import FileResponse
 # import requests
 import whisper
@@ -11,11 +11,18 @@ from fastapi.responses import JSONResponse
 import chardet
 import json
 from pathlib import Path
+import wave
+
 
 from pydub import AudioSegment
 # for video to audio and extract youtube links to audio
 from moviepy.editor import VideoFileClip
 import pytube
+# import speech_recognition as sr
+# microphone
+from pydantic import BaseModel
+
+
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -67,6 +74,17 @@ async def extract_audio(file: UploadFile = File(...)):
     # Return the audio file
     # return FileResponse(audio_filename)
     return {"transcription": whisper_transcribe(audio_filename)}
+
+# --- mic to text 
+
+class Transcript(BaseModel):
+    transcript: str
+
+@app.post("/transcribe")
+async def transcribe(transcript: Transcript):
+    # Return the transcribed text received from the front-end
+    return {"transcribed_text": transcript.transcript}
+
 
 
 # Route to extract audio from a YouTube link
