@@ -1,24 +1,17 @@
 import shutil
 import os
 import uuid
-from fastapi import FastAPI, File, UploadFile, HTTPException, Response, WebSocket
-from fastapi.responses import FileResponse
-# import requests
+from fastapi import FastAPI, File, UploadFile, HTTPException, Response
 import whisper
 # youtube subtitle
 from whisper.utils import WriteSRT
-from fastapi.responses import JSONResponse
 import chardet
 import json
 from pathlib import Path
-import wave
-
-
 from pydub import AudioSegment
 # for video to audio and extract youtube links to audio
 from moviepy.editor import VideoFileClip
 import pytube
-# import speech_recognition as sr
 # microphone
 from pydantic import BaseModel
 
